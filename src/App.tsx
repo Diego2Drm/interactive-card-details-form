@@ -5,10 +5,10 @@ import { Form } from "./components/Form"
 function App() {
 
   return (
-    <>
+    <section className="lg:flex">
      <Cards />
      <Form />
-    </>
+    </section>
   )
 }
 

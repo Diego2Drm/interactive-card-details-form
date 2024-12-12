@@ -1,8 +1,8 @@
 
 function Form() {
   return (
-    <section className="w-full pt-20 px-5 pb-10">
-      <form action="" className="flex flex-col gap-2">
+    <section className="w-full pt-20 px-5 pb-10 lg:flex lg:h-screen lg:items-center lg:justify-center">
+      <form action="" className="flex flex-col gap-2 lg:w-1/2">
         <p className="title">Cardholder name</p>
         <input type="text" placeholder="e.g. Jane Apleseed" className="inputInfo" />
 

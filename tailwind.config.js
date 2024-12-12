@@ -20,7 +20,8 @@ export default {
       backgroundImage: {
         'cardback': 'url(./src/assets/images/bg-card-back.png)',
         'cardFront': 'url(./src/assets/images/bg-card-front.png)',
-        'bgMianMobile': 'url(./src/assets/images/bg-main-mobile.png)'
+        'bgMianMobile': 'url(./src/assets/images/bg-main-mobile.png)',
+        'bgMianDesktop': 'url(./src/assets/images/bg-main-desktop.png)',
       }
     },
   },
