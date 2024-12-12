@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.title{
+  @apply text-Very-dark-violet font-semibold tracking-wide text-sm uppercase mb-2
+}
+.inputInfo{
+  @apply border border-Light-grayish-violet rounded-lg p-2 w-full placeholder:text-Light-grayish-violet placeholder:font-semibold
+}
+.inputDate {
+  @apply border border-Light-grayish-violet rounded-lg p-2 placeholder:text-Light-grayish-violet placeholder:font-semibold
+}

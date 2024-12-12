@@ -1,4 +1,5 @@
 import { Cards } from "./components/Cards"
+import { Form } from "./components/Form"
 
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <>
      <Cards />
+     <Form />
     </>
   )
 }
