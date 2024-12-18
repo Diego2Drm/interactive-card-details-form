@@ -15,7 +15,7 @@ const Form: React.FC<FormDataProps> = ({ formData, handleSubmit, handleChange, e
     <section className="w-full pt-20 px-5 pb-10 lg:flex lg:h-screen lg:items-center lg:justify-center">
       <form action="" className="flex flex-col gap-2 lg:w-1/2" onSubmit={handleSubmit}>
         <p className="title">Cardholder name</p>
-        <input type="text" placeholder="e.g. Jane Apleseed" className="inputInfo"
+        <input type="text" placeholder="e.g. Jane Apleseed" className="inputInfo "
           name="cardName"
           value={formData.cardName}
           onChange={handleChange}
@@ -63,7 +63,7 @@ const Form: React.FC<FormDataProps> = ({ formData, handleSubmit, handleChange, e
           </div>
         </div>
 
-        <button type="submit" className="bg-Very-dark-violet text-white rounded-lg p-3 mt-5">Confirm</button>
+        <button type="submit" className="text-white rounded-lg p-3 mt-5 bg-gradient-to-r from-Very-dark-violet to-Very-dark-violet hover:from-[#600594] hover:to-[#6448fe]">Confirm</button>
       </form>
     </section>
   );

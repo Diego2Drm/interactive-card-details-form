@@ -8,8 +8,14 @@
 .inputInfo{
   @apply border border-Light-grayish-violet rounded-lg p-2 w-full placeholder:text-Light-grayish-violet placeholder:font-semibold lg:mb-2 lg:p-3
 }
+.inputInfo:focus{
+  @apply focus:outline-[#600594] focus:outline-8
+}
 .inputDate {
   @apply border border-Light-grayish-violet rounded-lg p-2 placeholder:text-Light-grayish-violet placeholder:font-semibold
+}
+.inputDate:focus{
+  @apply focus:outline-[#600594] focus:outline-[1rem]
 }
 .cardBack-desktop{
   @apply lg:top-1/2 lg:-right-1/4 lg:w-96 lg:h-80 lg:bg-contain lg:bg-no-repeat lg:pt-[5.6rem] lg:pr-12
