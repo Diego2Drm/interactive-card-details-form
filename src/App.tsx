@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Cards } from "./components/Cards"
 import { Form } from "./components/Form"
+import { ThankYou } from "./components/ThankYou";
 // import Exapmle from "./components/Example";
 
 export interface CardFormData {
@@ -35,12 +36,12 @@ function App() {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    
-    if( (name === 'cvc' || name === 'expYear' ||  name === 'expMonth' || name === 'cardNumber') && !/^\d*$/.test(value)){
+
+    if ((name === 'cvc' || name === 'expYear' || name === 'expMonth' || name === 'cardNumber') && !/^\d*$/.test(value)) {
       return;
     }
     setFormData({
-      ...formData, 
+      ...formData,
       [name]: value
     })
   }
@@ -48,25 +49,25 @@ function App() {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
-    const newErrors : CardFormDataErrors= {};
-    if(!formData.cardName || !/^[a-zA-Z\s]*$/.test(formData.cardName)){
+    const newErrors: CardFormDataErrors = {};
+    if (!formData.cardName || !/^[a-zA-Z\s]*$/.test(formData.cardName)) {
       newErrors.cardName = "Can't be blank and must contain only letters";
     }
-    if(!formData.cardNumber || formData.cardNumber.length !== 16 ){
+    if (!formData.cardNumber || formData.cardNumber.length !== 16) {
       newErrors.cardNumber = "Can't be blank and must be 16 digits"
     }
-    if(!formData.expMonth || formData.expMonth.length !== 2 ){
+    if (!formData.expMonth || formData.expMonth.length !== 2) {
       newErrors.expMonth = "Can't be blank and must be 2 digits"
     }
-    if(!formData.expYear || formData.expYear.length !== 2 ){
+    if (!formData.expYear || formData.expYear.length !== 2) {
       newErrors.expYear = "Can't be blank and must be 2 digits"
     }
-    if(!formData.cvc || formData.cvc.length !== 3){
+    if (!formData.cvc || formData.cvc.length !== 3) {
       newErrors.cvc = "Can't be blank and must be 3 digits"
     }
- 
 
-    if(Object.keys(newErrors).length > 0){
+
+    if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
@@ -84,10 +85,25 @@ function App() {
     console.log(formData);
   }
 
+  const handleReset = () => {
+    setFormData({
+      cardName: '',
+      cardNumber: '',
+      expMonth: '',
+      expYear: '',
+      cvc: '',
+    });
+    setShowData(false);
+    setSubmitData(null)
+  }
   return (
     <section className="lg:flex">
       <Cards formData={submitData} showData={showData} />
-      <Form formData={formData} handleSubmit={handleSubmit} handleChange={handleChange} errors={errors}/>
+      {
+        submitData ?
+          <ThankYou handleReset={handleReset}/> :
+          <Form formData={formData} handleSubmit={handleSubmit} handleChange={handleChange} errors={errors} />
+      }
       {/* <Exapmle /> */}
     </section>
   )
