@@ -18,8 +18,8 @@
   @apply focus:outline-[#600594] focus:outline-[1rem]
 }
 .cardBack-desktop{
-  @apply lg:top-1/2 lg:-right-1/4 lg:w-96 lg:h-80 lg:bg-contain lg:bg-no-repeat lg:pt-[5.6rem] lg:pr-12
+  @apply lg:top-1/2 lg:-right-1/4 lg:w-96 lg:h-80
 }
 .cardFront-desktop{
-  @apply lg:bottom-64 lg:left-1/3 lg:w-96 lg:h-80 lg:bg-contain lg:bg-no-repeat
+  @apply lg:bottom-64 lg:left-1/3 lg:w-96 lg:h-80 
 }
